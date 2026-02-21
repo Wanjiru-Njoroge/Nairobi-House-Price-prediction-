@@ -1,0 +1,11 @@
+Column Name,Description,Data Type,Source
+Title,Full title of the property listing,String,Listing page
+Detail URL,URL to the full property detail page,String (URL),Listing page
+Location,Suburb or area where property is located,String,Listing page
+Bedrooms,Number of bedrooms,Numeric,Listing page
+Bathrooms,Number of bathrooms,Numeric,Listing page
+House Size,Size of the property (usually square meters),String,Listing page
+Price,Listed sale price of the property,String (KES),Listing page
+Property Type,"Type of property (Apartment, House, Villa, etc.)",String,Detail page
+Listing Date,Date the property was listed,Date (String format),Detail page
+Amenities,List of amenities/features extracted from description,String (Comma-separated),Detail page description
