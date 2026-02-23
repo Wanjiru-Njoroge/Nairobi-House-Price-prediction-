@@ -14,11 +14,11 @@ st.set_page_config(
 # ── Load model & metadata (cached) ──
 @st.cache_resource
 def load_model_and_info():
-    data = joblib.load("model.pkl")  # ← make sure this file exists in the same folder
+    data = joblib.load("model.pkl") 
     return (
-        data['model'],           # xgb.Booster
-        data['features'],        # list of column names used in training
-        data['mae']              # MAE from test set (for ± range)
+        data['model'],           
+        data['features'],        
+        data['mae']             
     )
 
 model, trained_features, mae = load_model_and_info()
@@ -51,7 +51,7 @@ with col2:
 # ── Prepare input exactly like training data ──
 input_dict = {
     "size_sqft": size_sqft,
-    "Amenities_count": amenities_count,   # ← must match exact training column name
+    "Amenities_count": amenities_count,   
     "Bedrooms": bedrooms,
     "Bathrooms": bathrooms,
 }
@@ -71,9 +71,7 @@ for loc in possible_locations:
     # Using lower() to handle possible case differences
     input_dict[f"Location_{loc}"] = 1 if selected_loc_lower == loc.lower() else 0
 
-# For "Other" — if none of the above match, we can optionally boost "Other" logic,
-# but since your model doesn't have a "Location_other" dummy (likely dropped),
-# leaving unselected as 0 is usually fine (baseline)
+
 
 # Create DataFrame
 input_df = pd.DataFrame([input_dict])
@@ -92,7 +90,7 @@ if st.button("Predict Price", type="primary"):
         dmatrix = xgb.DMatrix(input_df)
         prediction = model.predict(dmatrix)[0]
         
-        # Safeguard: avoid negative prices
+        
         prediction = max(prediction, 0)
         
         low = prediction - mae
