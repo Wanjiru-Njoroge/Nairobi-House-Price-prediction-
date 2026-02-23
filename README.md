@@ -22,18 +22,18 @@ The Nairobi House Price Prediction project involves:
 4. **Deployment**: The final model is integrated into a Python app and Jupyter notebook for easy access and visualization.
 
 ### Workflow
-- Data scraping and preprocessing: `scrap.ipynb`
-- Model training and evaluation: `model.ipynb`
-- Prediction and visualization: `app.ipynb`, `app.py`
+- Data scraping and preprocessing: `Nairobi_House_Price_Predictionscrap.ipynb`
+- Model training and evaluation: `Nairobi_House_Price_Predictionmodel.ipynb`
+- Prediction and visualization: `aNairobi_House_Price_Predictionapp.ipynb, app.py`
 
 ## Project Structure
-- **app.ipynb**: Main notebook for running the prediction app and visualizations.
+- **Nairobi_House_Price_Predictionapp.ipynb**: Main notebook for running the prediction app and visualizations.
 - **app.py**: Python script for the prediction application.
 - **kenya_property24_data_dictionary.csv**: Data dictionary describing the dataset features.
 - **kenya_property24_sales_cleaned.csv**: Cleaned property sales data.
 - **kenya_property24_sales.csv**: Raw property sales data.
-- **model.ipynb**: Notebook for model development and evaluation.
-- **scrap.ipynb**: Notebook for data scraping and preprocessing.
+- **Nairobi_House_Price_Predictionmodel.ipynb**: Notebook for model development and evaluation.
+- **Nairobi_House_Price_Predictionscrap.ipynb**: Notebook for data scraping and preprocessing.
 
 ## Usage
 1. Explore and preprocess data in `scrap.ipynb`.
